@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF5E9;
+  --color-gold-500: #C29B5A;
+  --color-gold-600: #A88346;
+  --color-richblack: #0A0A0A;
+  
+  --font-serif: "Cinzel", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  color: var(--color-richblack);
+}
