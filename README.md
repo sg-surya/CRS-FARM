@@ -1,20 +1,44 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# CRS Farm House
 
-# Run and deploy your AI Studio app
+A premium wedding and event venue experience platform, crafted with elegance and performance in mind. Built to showcase expansive layouts, grand weddings, corporate functions, and majestic lawns.
 
-This contains everything you need to run your app locally.
+Built by **[Vasudev AI](https://vasudev.online)**.
 
-View your app in AI Studio: https://ai.studio/apps/3ad6f1da-09cb-48b2-9b4e-e9964d470064
+## ✨ Features
 
-## Run Locally
+- **Immersive UI/UX**: Premium luxury aesthetics featuring a gold, rich black, and soft cream color palette.
+- **Dynamic Media Uploading**: Live-in-browser image uploading capabilities for hero sections, event banners, venue displays, and masonry gallery grids directly on the frontend.
+- **Performant Animations**: Beautiful and buttery-smooth `motion` scrolling transitions, Ken Burns effects, and responsive interactive hover aesthetics.
+- **Responsive Design**: Flawless interface scaling and layouts across mobile, tablet, and desktop viewports.
+- **Booking Integration**: Actionable lead-generation booking forms explicitly tailored for luxury events and event-type constraints.
 
-**Prerequisites:**  Node.js
+## 🛠️ Tech Stack
 
+- **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
+- **Type Safety**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Motion](https://motion.dev/)
+- **Icons**: [Lucide React](https://lucide.dev/)
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the site live.
+
+## 🤝 Credits & Acknowledgements
+
+- **Architected & Developed by [Vasudev AI](https://vasudev.online)**
+
+---
+*Empowering modern event spaces with elite digital experiences.*
