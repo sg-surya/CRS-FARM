@@ -32,17 +32,17 @@ export default function GalleryPage() {
     <div className="pt-24 min-h-screen bg-cream pb-32">
       
       {/* Custom Photo Upload Button */}
-      <label className="fixed bottom-8 right-8 z-50 bg-richblack text-cream px-6 py-3 text-xs tracking-widest uppercase border border-gold-500 hover:bg-gold-500 transition-all cursor-pointer shadow-2xl group flex items-center justify-center">
+      <label className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 bg-richblack text-cream px-4 sm:px-6 py-2 sm:py-3 text-[10px] sm:text-xs tracking-widest uppercase border border-gold-500 hover:bg-gold-500 transition-all cursor-pointer shadow-2xl group flex items-center justify-center rounded-none backdrop-blur-md">
         <span className="group-hover:scale-105 inline-block transition-transform">Upload Gallery Photos</span>
         <input type="file" hidden multiple accept="image/*" onChange={handleFileUpload} />
       </label>
 
       {/* Page Header */}
-      <div className="py-20 px-4 text-center">
+      <div className="py-16 md:py-20 px-4 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h3 className="text-gold-500 tracking-[0.3em] text-sm uppercase mb-4 font-semibold">Captured Moments</h3>
-          <h1 className="text-4xl md:text-6xl font-serif text-richblack uppercase tracking-widest">Our Gallery</h1>
-          <div className="w-24 h-px bg-gold-500 mx-auto mt-8" />
+          <h3 className="text-gold-500 tracking-[0.2em] sm:tracking-[0.3em] text-xs sm:text-sm uppercase mb-3 sm:mb-4 font-semibold">Captured Moments</h3>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif text-richblack uppercase tracking-widest">Our Gallery</h1>
+          <div className="w-16 sm:w-24 h-px bg-gold-500 mx-auto mt-6 sm:mt-8" />
         </motion.div>
       </div>
 

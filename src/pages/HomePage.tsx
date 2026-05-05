@@ -119,20 +119,58 @@ export default function HomePage() {
         {/* Gradients */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
         
-        {/* Floating Glassmorphism Boxes */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-          className="absolute bottom-10 left-4 md:left-10 z-10"
-        >
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 max-w-lg">
-            <h1 className="text-cream text-3xl md:text-5xl font-serif tracking-widest uppercase mb-4 leading-tight">Where Celebrations<br/>Become Grand</h1>
-            <p className="text-cream/90 text-sm tracking-wide font-sans leading-relaxed">
+        {/* Floating Hero Content */}
+        <div className="absolute inset-x-0 bottom-0 md:bottom-12 md:top-auto md:left-10 md:right-auto z-10 flex flex-col justify-end pb-28 md:pb-0 px-4 md:px-0 pointer-events-none">
+          <div className="md:bg-white/10 md:backdrop-blur-md md:border border-white/20 p-0 md:p-8 max-w-lg mx-auto md:mx-0 w-full flex flex-col items-center md:items-start pointer-events-auto">
+            
+            {/* Animated Heading */}
+            <div className="mb-2 md:mb-4 text-center md:text-left overflow-hidden">
+               <motion.span 
+                 initial={{ y: 100, opacity: 0 }}
+                 animate={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                 className="block text-cream text-[8.5vw] sm:text-4xl md:text-5xl font-serif tracking-widest uppercase leading-tight drop-shadow-2xl md:drop-shadow-none"
+               >
+                 Where Celebrations
+               </motion.span>
+               <motion.span 
+                 initial={{ y: 100, opacity: 0 }}
+                 animate={{ y: 0, opacity: 1 }}
+                 transition={{ duration: 0.8, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                 className="block text-gold-500 md:text-cream text-[9vw] sm:text-4xl md:text-5xl font-serif tracking-widest uppercase leading-tight drop-shadow-2xl md:drop-shadow-none mt-2 md:mt-0"
+               >
+                 Become Grand
+               </motion.span>
+            </div>
+
+            {/* Desktop Description */}
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+              className="text-cream/90 text-sm tracking-wide font-sans leading-relaxed text-left hidden md:block"
+            >
               CRS Farm House is a premium event venue in Meerut, offering a perfect combination of spacious lawns, elegant banquet setup, and modern facilities. Ideal for weddings, receptions, and grand celebrations.
-            </p>
+            </motion.p>
+            
+            {/* Mobile Animated Button */}
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+              className="mt-12 md:hidden w-full max-w-[240px] mx-auto"
+            >
+              <button 
+                onClick={() => document.getElementById('booking-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="relative overflow-hidden text-cream border border-gold-500/50 bg-black/20 backdrop-blur-md px-6 py-4 uppercase tracking-[0.2em] text-[10px] sm:text-xs w-full flex items-center justify-center gap-3 group rounded-full shadow-2xl"
+              >
+                <div className="absolute inset-0 w-0 bg-gold-500 transition-all duration-[600ms] ease-out group-hover:w-full"></div>
+                <span className="relative z-10 transition-colors duration-300 group-hover:text-richblack font-semibold">Book Event</span>
+                <span className="relative z-10 w-8 h-[1px] bg-gold-400 group-hover:bg-richblack transition-all"></span>
+              </button>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
         
         <div className="absolute bottom-10 right-4 md:right-10 z-10 hidden sm:block">
           <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 flex flex-col items-end text-right">
@@ -234,13 +272,13 @@ export default function HomePage() {
             />
           </div>
           {/* Floating Text Box */}
-          <div className="bg-richblack text-cream p-10 md:p-16 absolute -bottom-10 right-4 md:-bottom-12 md:right-12 max-w-xl shadow-2xl border border-white/10">
-             <h3 className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-4">Capacity 1000-1200 Guests</h3>
-             <h2 className="text-2xl md:text-3xl font-serif mb-6 leading-tight">CREATE YOUR PERFECT WEDDING EXPERIENCE</h2>
-             <p className="text-cream/70 font-sans tracking-wide text-sm mb-8 leading-relaxed">
+          <div className="bg-richblack text-cream p-8 sm:p-10 md:p-16 relative md:absolute md:-bottom-12 md:right-12 mt-[-4rem] md:mt-0 mx-4 md:mx-0 max-w-xl shadow-2xl border border-white/10 z-10 text-center md:text-left">
+             <h3 className="text-gold-500 tracking-[0.3em] text-xs uppercase mb-3 md:mb-4">Capacity 1000-1200 Guests</h3>
+             <h2 className="text-xl sm:text-2xl md:text-3xl font-serif mb-4 md:mb-6 leading-tight">CREATE YOUR PERFECT WEDDING EXPERIENCE</h2>
+             <p className="text-cream/70 font-sans tracking-wide text-xs sm:text-sm mb-6 md:mb-8 leading-relaxed">
                Celebrate your vows in our expansive layouts featuring a combination of a large outdoor lawn and an elegant indoor banquet hall. Perfectly positioned in Meerut for premium gatherings.
              </p>
-             <button className="uppercase tracking-[0.2em] text-sm border-b border-gold-500 pb-1 hover:text-gold-500 hover:scale-[1.05] inline-block transition-all duration-300 origin-left">
+             <button className="uppercase tracking-[0.2em] text-xs sm:text-sm border-b border-gold-500 pb-1 hover:text-gold-500 hover:scale-[1.05] inline-block transition-all duration-300 origin-center md:origin-left">
                Explore Packages
              </button>
           </div>
@@ -248,7 +286,7 @@ export default function HomePage() {
       </section>
 
       {/* spacer to accommodate the floating box on smaller screens */}
-      <div className="h-20 bg-cream md:h-12" />
+      <div className="h-10 md:h-12 bg-[#F5F1E6]" />
 
       {/* 5. Wedding Services */}
       <section className="py-24 bg-[#F5F1E6]">
@@ -285,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* 6. Booking Form */}
-      <section className="py-32 relative bg-richblack flex items-center justify-center">
+      <section id="booking-form" className="py-32 relative bg-richblack flex items-center justify-center">
         <img 
           src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?auto=format&fit=crop&q=80&w=2000"
           alt="booking background"
