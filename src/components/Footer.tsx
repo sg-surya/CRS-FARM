@@ -71,10 +71,13 @@ export default function Footer() {
         
         {/* Copyright */}
         <div className="pt-8 border-t border-cream/10 text-center flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-cream/50 text-xs tracking-widest uppercase">
+          <p className="text-cream/50 text-xs tracking-widest uppercase text-center md:text-left">
             &copy; {new Date().getFullYear()} CRS Farm House. All rights reserved.
           </p>
-          <div className="flex gap-6 text-cream/50 text-xs tracking-widest uppercase">
+          <p className="text-cream/50 text-xs tracking-widest uppercase text-center">
+            Built by <a href="https://vasudev.online" target="_blank" rel="noopener noreferrer" className="text-gold-500 hover:text-gold-600 transition-colors hover:underline">Vasudev AI</a>
+          </p>
+          <div className="flex gap-6 text-cream/50 text-xs tracking-widest uppercase justify-center md:justify-end">
             <a href="#" className="hover:text-gold-500 transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-gold-500 transition-colors">Terms of Service</a>
           </div>
